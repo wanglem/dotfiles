@@ -13,3 +13,4 @@ set hlsearch            " highlight matches
 nnoremap j gj
 nnoremap k gk
 nnoremap <S-q> :qa<CR>    " Shift-q quit all
+nnoremap <S-s> :wq<CR>    " Shift-s save & quit

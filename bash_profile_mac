@@ -2,7 +2,7 @@ ssh-add -A
 export HOMEBREW_GITHUB_API_TOKEN=
 alias ls='ls -Gph'
 alias curl='curl -s '
-export PS1="\W$ "
+export PS1="\[\033[34m\]"'[Mac] \u@\h:\w\n$ '"\[\033[0m\]"
 export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 export SPARK_VERSION="1.3"
 export SPARK_HOME="/Users/zwang/Documents/workspace/spark-$SPARK_VERSION/bin"
@@ -25,3 +25,4 @@ gp ()
     CMD="git pull origin $dir && git fetch origin && git st";
     eval "${CMD}"
 }
+export LC_CTYPE=en_US.UTF-8

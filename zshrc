@@ -48,9 +48,12 @@ gp ()
     CMD="git pull origin $dir && git fetch origin && git st";
     eval "${CMD}"
 }
-export PS1="[dev] %n@%m %d"$'\n'"$ "
 HISTSIZE=1000
 SAVEHIST=1000
 HISTFILE=$HOME/.zhistory
 setopt HIST_IGNORE_ALL_DUPS
 setopt EXTENDED_HISTORY
+autoload -Uz colors && colors
+export PROMPT=$fg_bold[green]"[dev] %n@%m %d"$'\n'"$ "$reset_color
+ # remove slash "/" from wordchars
+export WORDCHARS=${WORDCHARS/\/}
