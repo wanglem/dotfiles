@@ -4,9 +4,6 @@ export GITAWAREPROMPT=~/.bash/git-aware-prompt
 source "${GITAWAREPROMPT}/main.sh"
 export PS1="\[\033[34m\]"'[Mac] \u@\h:\w\n\$'"\[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\] \$ ""\[\033[0m\]"
 alias sub="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
-alias gowork="cd /Users/zeyangw/Documents/workspace"
-alias gonote="cd /Users/zeyangw/Documents/stuff/notes"
-export PATH="/apollo/env/SDETools/bin:$PATH"
 export PATH="/usr/local/bin:$PATH" # let /usr/local/bin override /usr/bin
 alias ll='ls -lhct'
 gp () 
@@ -20,8 +17,6 @@ gp ()
     eval "${CMD}"
 }
 export LC_CTYPE=en_US.UTF-8
-eval "$(jenv init -)"
-export JAVA_HOME="$HOME/.jenv/versions/`jenv version-name`"
 # export PS1="\u@\h \W \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\$ "
 if [ -f ~/.git-completion.bash ]; then
     . ~/.git-completion.bash
